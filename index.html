@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="wrapper">
+      <div id="main">
+        <div id="display">
+            <div id="main-display"></div>
+        </div>
+        <div class="divider"></div>
+        <div id="button-wrapper">
+            <section class="button-section">
+                <div class="button delete" onclick="output.innerText =' '">C</div>
+                <div class="button" onclick="output.innerText +='('">(</div>
+                <div class="button" onclick="output.innerText +=')'">)</div>
+                <div class="button delete" onclick="backSpace()">del</div>
+            </section>
+            <section class="button-section">
+                <div class="button" onclick="output.innerText +='1'">1</div>
+                <div class="button" onclick="output.innerText +='2'">2</div>
+                <div class="button" onclick="output.innerText +='3'">3</div>
+                <div class="button operation" onclick="output.innerText +='+'">+</div>
+            </section>
+            <section class="button-section">
+                <div class="button" onclick="output.innerText +='4'">4</div>
+                <div class="button" onclick="output.innerText +='5'">5</div>
+                <div class="button" onclick="output.innerText +='6'">6</div>
+                <div class="button operation" onclick="output.innerText +='-'">-</div>
+            </section>
+            <section class="button-section">
+                <div class="button" onclick="output.innerText +='7'">7</div>
+                <div class="button" onclick="output.innerText +='8'">8</div>
+                <div class="button" onclick="output.innerText +='9'">9</div>
+                <div class="button operation" onclick="output.innerText +='/'">/</div>
+            </section>
+            <section class="button-section">
+                <div class="button" onclick="output.innerText +='.'">.</div>
+                <div class="button" onclick="output.innerText +='0'">0</div>
+                <div id="equals" class="button" onclick="output.innerText = eval(output.innerText)">=</div>
+                <div class="button operation" onclick="output.innerText +='*'">*</div>
+            </section>
+        </div>
+        <div class="divider"></div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
